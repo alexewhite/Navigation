@@ -11,12 +11,23 @@ struct ContentView: View {
     var body: some View {
         
         NavigationStack {
-            Text("This is the root veiw 🌳")
+            VStack (spacing: 20.0){
+                Text("What is your favorite color?")
+                
+                NavigationLink(destination: Text("Your favorite color is blue!")
+                    .font(.title3)) {
+                        Text("It's blue.")
+                            .fontWeight(.bold)
+                }
+                NavigationLink(destination: Text("Your favorite color is green!")
+                    .font(.title3)) {
+                        Text("It's green.")
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.green)
+                }
+            } // end of VStack
             
-            NavigationLink(destination: Text("You've arrived to the second view 🎊")
-                .font(.title3)) {
-                Text("Click me!")//the label content shows to the user the link
-            }
+            
         } // end of NavigationStack
         
     }
