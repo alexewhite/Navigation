@@ -12,22 +12,24 @@ struct ContentView: View {
         
         NavigationStack {
             VStack (spacing: 20.0){
-                Text("What is your favorite color?")
+                Text("What view do you want to go to")
                 
-                NavigationLink(destination: Text("Your favorite color is blue!")
+                NavigationLink(destination: Text("this is the first view")
                     .font(.title3)) {
-                        Text("It's blue.")
+                        Text("first")
                             .fontWeight(.bold)
                 }
-                NavigationLink(destination: Text("Your favorite color is green!")
+                NavigationLink(destination: SecondView()
                     .font(.title3)) {
-                        Text("It's green.")
+                        Text("second")
                             .fontWeight(.bold)
                             .foregroundColor(Color.green)
                 }
             } // end of VStack
             
-            
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
         } // end of NavigationStack
         
     }
