@@ -1,5 +1,5 @@
 //
-//  SecondView.swift
+//  FourthView.swift
 //  Navigation
 //
 //  Created by Scholar on 8/7/25.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct SecondView: View {
+struct FourthView: View {
     var body: some View {
         VStack{
-            Text("You are on the CONTACT page.")
+            Text("You are on the HELP page.")
                 .font(.title)
             Spacer()
             NavigationLink(destination: ThirdView()
@@ -21,9 +21,9 @@ struct SecondView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 200.0, height: 200.0)
             }
-            NavigationLink(destination: FourthView()
+            NavigationLink(destination: SecondView()
                 .font(.title3)) {
-                    Image("help")
+                    Image("contact2")
                         .resizable()
                         
                         .aspectRatio(contentMode: .fit)
@@ -42,5 +42,5 @@ struct SecondView: View {
 }
 
 #Preview {
-    SecondView()
+    FourthView()
 }
